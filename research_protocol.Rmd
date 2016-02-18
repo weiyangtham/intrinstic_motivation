@@ -1,0 +1,26 @@
+---
+title: "Research Protocol"
+author: "Tham, Wei Yang"
+date: "February 17, 2016"
+output: html_document
+bibliography: intrinsic_motivation.bib
+---
+
+# Objectives
+
+This experiment tests two hypotheses about tasks where evaluation of performance is noisy. 
+
+1. Receiving new information about past performance induces more effort and better performance
+2. Receiving new information about one’s own performance as well as peers’ performance induces more effort and better performance
+
+# Background 
+
+@kolstad2013 studies the release of surgeon report cards in Pennsylvania starting in 1998. The surgeons in this setting specialize in Coronary Artery Bypass Graft (CABG) surgery. The risk-adjusted mortality rates (RAMR) of surgeons and hospitals were calculated and made publicly available. @kolstad2013 finds that surgeons whose RAMR was high or low relative to their observed mortality rate (OMR) performed better i.e. had lower mortality rates. In addition, after RAMRs were released, the new information about performance relative to other surgeons resulted in better performance. The interpretation is that releasing RAMRs provided better information about surgeons’ objective performance, but also better information about their performance relative to some reference group. Better performance was found even after controlling for monetary incentives, suggesting that better information affected the non-monetary incentives of surgeons. 
+
+# Procedures
+An experimental design is used in this study. The task is a “correlation game”. The player is presented with a 2-dimensional scatter plot and is asked to guess the correlation coefficient of the two variables. The performance of a player is measured by the accuracy of her guesses. 
+
+In between tasks, they are given the opportunity to practice a task. Practicing is not rewarded, although it may yield greater payoffs if it helps the participant become more proficient at the task. The main outcome of interest is the amount of practice put in. In treatment groups participants will be asked what they expected their performance to be in terms of some subjective or objective measure, and they will be provided with information about their performance based on the same measure. 
+
+
+# References
