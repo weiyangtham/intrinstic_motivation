@@ -2,7 +2,7 @@
 title: "Research Protocol"
 author: "Tham, Wei Yang"
 date: "February 17, 2016"
-output: html_document
+output: pdf_document
 bibliography: intrinsic_motivation.bib
 ---
 
@@ -18,9 +18,24 @@ This experiment tests two hypotheses about tasks where evaluation of performance
 @kolstad2013 studies the release of surgeon report cards in Pennsylvania starting in 1998. The surgeons in this setting specialize in Coronary Artery Bypass Graft (CABG) surgery. The risk-adjusted mortality rates (RAMR) of surgeons and hospitals were calculated and made publicly available. @kolstad2013 finds that surgeons whose RAMR was high or low relative to their observed mortality rate (OMR) performed better i.e. had lower mortality rates. In addition, after RAMRs were released, the new information about performance relative to other surgeons resulted in better performance. The interpretation is that releasing RAMRs provided better information about surgeons’ objective performance, but also better information about their performance relative to some reference group. Better performance was found even after controlling for monetary incentives, suggesting that better information affected the non-monetary incentives of surgeons. 
 
 # Procedures
-An experimental design is used in this study. The task is a “correlation game”. The player is presented with a 2-dimensional scatter plot and is asked to guess the correlation coefficient of the two variables. The performance of a player is measured by the accuracy of her guesses. 
+## Research Design
+An experimental design is used in this study. The task is a “correlation game”. The subject is presented with a 2-dimensional scatter plot and is asked to guess the correlation coefficient of the two variables. The performance of a subject is measured by the accuracy of her guesses, and rewards are given based on performance. 
 
-In between tasks, they are given the opportunity to practice a task. Practicing is not rewarded, although it may yield greater payoffs if it helps the participant become more proficient at the task. The main outcome of interest is the amount of practice put in. In treatment groups participants will be asked what they expected their performance to be in terms of some subjective or objective measure, and they will be provided with information about their performance based on the same measure. 
+Each subject performs two round of tasks. In between tasks, they are given the opportunity to practice the task. Practicing is not rewarded, although it may yield greater payoffs if it helps the participant become more proficient at the task. The main outcome of interest is the amount of practice put in. In treatment groups, participants will be asked after their first round what they expected their performance to be in terms of some subjective or objective measure, and they will be provided with information about their performance based on the same measure. They will then have the option to practice, followed by performing the second round of tasks. 
 
+## Sampling
+The sample will be under 1000 participants from the online platform Amazon’s Mechanical Turk. The study will be open to all online participants who speak English. We will not screen out any particular characteristics. We will look to have a balanced representation across gender and age groups. 
+
+## Measurement
+The main outcomes of interest are the number of practice tasks completed and/or the time spent on practice. We will compare outcomes across treatment and control groups. Actual task performance and improvement in task performance between rounds are also of interest to take into account the monetary incentives to do practice and do better on the second round of tasks. 
+
+## Study Procedures
+We do not anticipate any significant risks to participants, and any risks will be minimized by providing subjects with an endowment to cover any losses they may incur. Participants will participate for approximately 5-10 minutes on Mechanical Turk, and will not be involved for any duration longer than this. Data will be evaluated after all subjects have participated. Data from Mechanical Turk will not contain any identifying information of participants, aside from Amazon usernames. These will be stored separately from the data collected from our experiment. The information will be coded for anonymity and only the experimenters will have access to the data. The data will be stored on experiments’ personal computers and will be encrypted.
+
+## Internal Validity
+The only threat to internal validity is if the subjects are aware of the intentions of the investigation.
+
+## Data Analysis
+Data analysis will use straightforward methods such as difference in means and/or linear regression. 
 
 # References
