@@ -21,6 +21,17 @@ This experiment tests two hypotheses about tasks where evaluation of performance
 ## Research Design
 An experimental design is used in this study. The task is a “correlation game”. The subject is presented with a 2-dimensional scatter plot and is asked to guess the correlation coefficient of the two variables. The performance of a subject is measured by the accuracy of her guesses, and rewards are given based on performance. 
 
+```{r, echo = F, message = F}
+library(MASS)
+library(dplyr)
+library(ggplot2)
+s <- matrix(c(1, 0.5, 0.5, 1), 2, 2)
+draws <- data.frame(mvrnorm(n = 200, rep(0, 2), s)) %>% tbl_df() %>% rename(x = X1, y = X2)
+qplot(x, y, data = draws, main = "Example Scatterplot")
+
+```
+
+
 Each subject performs two round of tasks. In between tasks, they are given the opportunity to practice the task. Practicing is not rewarded, although it may yield greater payoffs if it helps the participant become more proficient at the task. The main outcome of interest is the amount of practice put in. In treatment groups, participants will be asked after their first round what they expected their performance to be in terms of some subjective or objective measure, and they will be provided with information about their performance based on the same measure. They will then have the option to practice, followed by performing the second round of tasks. 
 
 ## Sampling
