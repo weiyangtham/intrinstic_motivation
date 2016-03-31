@@ -4,20 +4,30 @@
 library(MASS)
 library(plyr)
 library(dplyr)
+library(stringr)
 library(ggplot2)
 
-s = 0.5
-n = 100
-corrmat = matrix(c(1, s, s, 1), 2)
+corrplot <- function(rho, n){
+corrmat = matrix(c(1, rho, rho, 1), 2)
 mat_draws <- matrix(mvrnorm(n, mu = c(0.5, 0.5), Sigma = corrmat), ncol = 2) 
 # apply normal CDF to get uniform distribution
 df_draws <- mat_draws %>% as.data.frame %>% tbl_df %>% mutate(x = pnorm(V1), y = pnorm(V2))
 cor(df_draws$V1, df_draws$V2)
-cor(df_draws$x, df_draws$y)
-corrplot <- df_draws %>% ggplot(aes(x, y)) + geom_point()
-corrplot + geom_smooth(method = "lm", formula = y ~ x)
+actual_rho <- round(cor(df_draws$x, df_draws$y), 2)
+# corrplot_title = str_c("Corr =", actual_rho, sep = " ")
+corrplot <- df_draws %>% ggplot(aes(x, y)) + geom_point(size = 0.3) + theme(text = element_text(size = 7))
+print(str_c("saving correlation_plots/testplot_", actual_rho * 100, ".png"))
+ggsave(str_c("correlation_plots/testplot_", actual_rho * 100, ".png"), scale = 1/4)
+return(corrplot)
+}
+corrplot(0.95, 100)
+corrplot(0.1, 100)
+corrplot(0.2, 100)
+corrplot(0.4, 100)
+corrplot(0.6, 100)
+corrplot(0.8, 100)
 
-ggsave("testplot.png")
+
 
 # experiment with different themes
 corrplot + theme_bw()
